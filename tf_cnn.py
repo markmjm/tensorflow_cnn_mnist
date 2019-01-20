@@ -84,8 +84,3 @@ with tf.Session() as sess:
             acc = tf.reduce_mean(tf.cast(matches, tf.float32))
             print(f'time: {datetime.datetime.now()} ... ON STEP: {i} ... ACCURACY: {sess.run(acc,feed_dict={x:mnist.test.images, y_true:mnist.test.labels, hold_prob:1.0})}')
             print('\n')
-
-
-
-
-
